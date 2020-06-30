@@ -41,6 +41,7 @@
             DevExpress.XtraBars.Ribbon.GalleryItem galleryItem8 = new DevExpress.XtraBars.Ribbon.GalleryItem();
             DevExpress.XtraBars.Ribbon.GalleryItem galleryItem9 = new DevExpress.XtraBars.Ribbon.GalleryItem();
             this.galleryControl1 = new DevExpress.XtraBars.Ribbon.GalleryControl();
+            this.galleryControlClient2 = new DevExpress.XtraBars.Ribbon.GalleryControlClient();
             this.galleryControlClient1 = new DevExpress.XtraBars.Ribbon.GalleryControlClient();
             ((System.ComponentModel.ISupportInitialize)(this.galleryControl1)).BeginInit();
             this.galleryControl1.SuspendLayout();
@@ -51,8 +52,6 @@
             this.galleryControl1.AllowDrop = true;
             this.galleryControl1.Controls.Add(this.galleryControlClient1);
             this.galleryControl1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.galleryControl1.DesignGalleryGroupIndex = 0;
-            this.galleryControl1.DesignGalleryItemIndex = 0;
             // 
             // 
             // 
@@ -95,11 +94,17 @@
             this.galleryControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.galleryControl1_MouseDown);
             this.galleryControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.galleryControl1_MouseMove);
             // 
+            // galleryControlClient2
+            // 
+            this.galleryControlClient2.GalleryControl = null;
+            this.galleryControlClient2.Location = new System.Drawing.Point(0, 0);
+            this.galleryControlClient2.Size = new System.Drawing.Size(0, 0);
+            // 
             // galleryControlClient1
             // 
             this.galleryControlClient1.GalleryControl = this.galleryControl1;
-            this.galleryControlClient1.Location = new System.Drawing.Point(2, 23);
-            this.galleryControlClient1.Size = new System.Drawing.Size(255, 257);
+            this.galleryControlClient1.Location = new System.Drawing.Point(2, 31);
+            this.galleryControlClient1.Size = new System.Drawing.Size(255, 249);
             // 
             // Form1
             // 
@@ -109,6 +114,7 @@
             this.Controls.Add(this.galleryControl1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.galleryControl1)).EndInit();
             this.galleryControl1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -119,6 +125,7 @@
 
         private DevExpress.XtraBars.Ribbon.GalleryControl galleryControl1;
         private DevExpress.XtraBars.Ribbon.GalleryControlClient galleryControlClient1;
+        private DevExpress.XtraBars.Ribbon.GalleryControlClient galleryControlClient2;
     }
 }
 

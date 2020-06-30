@@ -94,5 +94,17 @@ namespace WindowsFormsApplication1
             dragItemHitInfo = null;
             galleryControlClient1.Invalidate();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+            foreach (GalleryItemGroup g in this.galleryControl1.Gallery.Groups)
+            {
+                var ctrl = new GalleryCaptionControl {CaptionText = g.Caption};
+                g.CaptionControl =ctrl;
+                
+            }
+           
+        }
     }
 }
